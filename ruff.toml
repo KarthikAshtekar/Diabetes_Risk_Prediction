@@ -1,0 +1,6 @@
+extend-exclude = [
+    "25BM6JP22_CDS_CODE.ipynb",
+    "notebooks/legacy_brfss_baseline.ipynb",
+    "notebooks/01_nhanes_feasibility_eda.ipynb",
+]
+

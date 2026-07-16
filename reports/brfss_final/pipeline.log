@@ -1,0 +1,26 @@
+2026-06-20 08:39:59,391 | INFO | brfss_full_pipeline | Loading and validating BRFSS 2015 data
+2026-06-20 08:41:23,068 | INFO | brfss_full_pipeline | Loading and validating BRFSS 2015 data
+2026-06-20 08:41:27,315 | INFO | brfss_full_pipeline | Running model comparison on a stratified training-only sample
+2026-06-20 08:42:26,503 | INFO | brfss_full_pipeline | Comparing multiclass XGBoost imbalance strategies
+2026-06-20 08:42:48,549 | INFO | brfss_full_pipeline | Tuning Logistic Regression, Random Forest and XGBoost
+2026-06-20 08:59:00,089 | INFO | brfss_full_pipeline | Loading and validating BRFSS 2015 data
+2026-06-20 08:59:05,129 | INFO | brfss_full_pipeline | Running model comparison on a stratified training-only sample
+2026-06-20 09:00:38,880 | INFO | brfss_full_pipeline | Comparing multiclass XGBoost imbalance strategies
+2026-06-20 09:01:19,125 | INFO | brfss_full_pipeline | Tuning Logistic Regression, Random Forest and XGBoost
+2026-06-20 09:06:14,806 | INFO | brfss_full_pipeline | Selecting validation-only thresholds and binary calibration
+2026-06-20 09:07:09,986 | INFO | brfss_full_pipeline | Fitting final models on the complete training partition
+2026-06-20 09:08:21,221 | INFO | brfss_full_pipeline | Computing importance, ablation and error analysis
+2026-06-20 09:10:05,333 | INFO | brfss_full_pipeline | Saving models and generating reports
+2026-06-20 09:59:18,177 | INFO | brfss_robustness | Loading official BRFSS split and saved model parameters
+2026-06-20 09:59:19,092 | INFO | brfss_robustness | Running 5x3 repeated cross-validation and feature-set ablation
+2026-06-20 10:04:57,597 | INFO | brfss_robustness | Evaluating a profile-grouped holdout
+2026-06-20 10:08:17,643 | INFO | brfss_robustness | Creating training-only strategy selection and evaluation splits
+2026-06-20 10:09:04,089 | INFO | brfss_robustness | Tuning multiclass probability multipliers
+2026-06-20 10:09:06,586 | INFO | brfss_robustness | Fitting multiclass probability calibration
+2026-06-20 10:09:07,054 | INFO | brfss_robustness | Searching custom class-weight multipliers
+2026-06-20 10:13:39,006 | INFO | brfss_robustness | Fitting ordinal and two-stage multiclass alternatives
+2026-06-20 10:14:35,345 | INFO | brfss_robustness | Selecting an out-of-fold three-model ensemble
+2026-06-20 10:17:25,022 | INFO | brfss_robustness | Running fold-safe moderate SMOTE-NC sensitivity analysis
+2026-06-20 10:18:33,363 | INFO | brfss_robustness | Computing official test-set bootstrap confidence intervals
+2026-06-20 10:20:54,543 | INFO | brfss_robustness | Fitting paired comparison models on the official training split
+2026-06-20 10:24:56,515 | INFO | brfss_robustness | Generating robustness figures and updating reports

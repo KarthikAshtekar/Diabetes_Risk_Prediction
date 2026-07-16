@@ -1,0 +1,4 @@
+class,count,class_name,percentage
+0,2572,Normal / lower-risk,0.44972897359678266
+1,2017,Diabetes-prone / prediabetes-risk,0.35268403567057177
+2,1130,Diabetic / diabetes-range,0.19758699073264557

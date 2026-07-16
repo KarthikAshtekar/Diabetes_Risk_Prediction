@@ -1,0 +1,20 @@
+feature,formula,group
+avg_systolic_bp,"row mean of BPXSY1, BPXSY2, BPXSY3, BPXSY4",blood_pressure
+avg_diastolic_bp,"row mean of BPXDI1, BPXDI2, BPXDI3, BPXDI4",blood_pressure
+pulse_pressure,avg_systolic_bp - avg_diastolic_bp,blood_pressure
+mean_arterial_pressure,avg_diastolic_bp + pulse_pressure / 3,blood_pressure
+bmi_category,"WHO-style BMI bands: <18.5, 18.5-24.9, 25-29.9, >=30",anthropometric
+waist_to_height_ratio,BMXWAIST / BMXHT,anthropometric
+central_obesity_flag,waist >=102 cm for men or >=88 cm for women,anthropometric
+age_band,"20-34, 35-44, 45-54, 55-64, 65+",demographics
+bmi_x_age,BMXBMI * RIDAGEYR,anthropometric
+bmi_x_waist,BMXBMI * BMXWAIST,anthropometric
+hypertension_flag,avg SBP >=130 or avg DBP >=80 or BPQ020 == 1,blood_pressure
+smoker_flag,"SMQ020 == 1 and SMQ040 in {1,2}",lifestyle
+physical_inactivity_flag,"no reported moderate/vigorous activity across PAQ605, PAQ620, PAQ650, PAQ665",lifestyle
+heavy_alcohol_flag,ALQ130 >2 drinks/day for men or >1 for women,lifestyle
+cholesterol_history_flag,BPQ080 == 1,medical_history
+cardiovascular_history_flag,any of MCQ160B-F == 1,medical_history
+cardiometabolic_history_count,"sum of hypertension, cholesterol and cardiovascular flags",medical_history
+insurance_gap_flag,HIQ011 == 2,socioeconomic_access
+low_income_access_risk_flag,INDFMPIR < 1.3 or HIQ011 == 2,socioeconomic_access

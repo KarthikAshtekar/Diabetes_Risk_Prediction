@@ -1,0 +1,10 @@
+model,class,class_name,recall
+Logistic Regression,0,Normal / lower-risk,0.640746500777605
+Logistic Regression,1,Diabetes-prone / prediabetes-risk,0.39880952380952384
+Logistic Regression,2,Diabetic / diabetes-range,0.6678445229681979
+XGBoost,0,Normal / lower-risk,0.6345256609642301
+XGBoost,1,Diabetes-prone / prediabetes-risk,0.4087301587301587
+XGBoost,2,Diabetic / diabetes-range,0.6713780918727915
+Simple Rule Score,0,Normal / lower-risk,0.6734059097978227
+Simple Rule Score,1,Diabetes-prone / prediabetes-risk,0.1765873015873016
+Simple Rule Score,2,Diabetic / diabetes-range,0.6254416961130742

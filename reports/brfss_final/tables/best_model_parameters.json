@@ -1,0 +1,37 @@
+{
+  "logistic_multiclass": {
+    "C": 0.03
+  },
+  "random_forest_multiclass": {
+    "n_estimators": 160,
+    "min_samples_leaf": 4,
+    "max_features": 1.0,
+    "max_depth": 18
+  },
+  "xgboost_multiclass": {
+    "colsample_bytree": 0.7713532627589614,
+    "gamma": 0.4563633644393066,
+    "learning_rate": 0.061738558891618764,
+    "max_depth": 6,
+    "min_child_weight": 1,
+    "n_estimators": 228,
+    "reg_alpha": 0.012563152773938664,
+    "reg_lambda": 1.5151324184839015,
+    "subsample": 0.7330663856998123
+  },
+  "logistic_binary": {
+    "C": 0.03
+  },
+  "xgboost_binary": {
+    "colsample_bytree": 0.9926515452756086,
+    "gamma": 0.34915701064545634,
+    "learning_rate": 0.029223394319260826,
+    "max_depth": 4,
+    "min_child_weight": 3,
+    "n_estimators": 287,
+    "reg_alpha": 0.011400863701127324,
+    "reg_lambda": 2.584093506411774,
+    "subsample": 0.7330061155615993,
+    "scale_pos_weight": 6.176998974431517
+  }
+}

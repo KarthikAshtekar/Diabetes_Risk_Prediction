@@ -1,0 +1,17 @@
+figure,family,claim
+class_distribution.png,comparison,Prediabetes is severely under-represented.
+model_comparison_multiclass.png,ranking,Compares multiclass model-selection performance.
+model_comparison_binary.png,ranking,Compares binary model-selection performance.
+multiclass_confusion_matrix.png,matrix,Shows multiclass error structure.
+binary_confusion_matrix.png,matrix,Shows binary errors at the selected threshold.
+binary_roc_curve.png,uncertainty/benchmark,Shows binary ranking quality.
+binary_pr_curve.png,uncertainty/benchmark,Shows minority-class precision-recall.
+calibration_curve_binary.png,ordered line-dot,Compares raw and calibrated probabilities.
+threshold_precision_recall_tradeoff.png,ordered line,Shows threshold operating trade-offs.
+top_feature_importance_xgboost.png,ranking,Ranks built-in model importance.
+permutation_importance_top20.png,ranking,Ranks held-out permutation importance.
+feature_family_ablation.png,diverging bar,Measures family-level incremental signal.
+bootstrap_confidence_intervals.png,faceted dot and interval,Quantifies uncertainty around the official held-out metrics.
+repeated_cv_model_comparison.png,dot and interval,Shows stability across 15 repeated validation folds.
+grouped_profile_split_comparison.png,grouped bar,Measures sensitivity to identical profiles crossing partitions.
+advanced_multiclass_strategy_comparison.png,ranked horizontal bar,"Compares thresholding, calibration, weights, ordinal, two-stage and ensemble approaches."

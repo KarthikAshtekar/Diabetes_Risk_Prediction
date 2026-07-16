@@ -1,0 +1,3 @@
+test,model_a,model_b,a_correct_b_wrong,a_wrong_b_correct,discordant_pairs,p_value,p_value_display
+exact_mcnemar,Weighted XGBoost,ExtraTrees,1167,5698,6865,0.0,<1e-300
+exact_mcnemar,Calibrated XGBoost,Threshold-tuned Logistic Regression,1685,648,2333,1.2523064366874383e-105,1.252e-105

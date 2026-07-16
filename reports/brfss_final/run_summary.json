@@ -1,0 +1,61 @@
+{
+  "dataset_shape": [
+    253680,
+    22
+  ],
+  "target_distribution": {
+    "0": 213703,
+    "1": 4631,
+    "2": 35346
+  },
+  "original_feature_count": 21,
+  "engineered_feature_count": 52,
+  "selected_multiclass_model": "XGBoost",
+  "multiclass_cv_macro_f1_leader": {
+    "model": "ExtraTrees",
+    "macro_f1": 0.4436134573423277
+  },
+  "multiclass_metrics": {
+    "accuracy": 0.6492431409649952,
+    "macro_f1": 0.4261622963342287,
+    "weighted_f1": 0.7186602415865345,
+    "balanced_accuracy": 0.5197527378003214,
+    "macro_roc_auc_ovr": 0.7615236767185478,
+    "macro_pr_auc_ovr": 0.4650004925249288
+  },
+  "selected_binary_model": "XGBoost",
+  "binary_cv_pr_auc_leader": {
+    "model": "XGBoost",
+    "pr_auc": 0.4183811563682684
+  },
+  "binary_metrics": {
+    "threshold": 0.26,
+    "roc_auc": 0.8286741499034429,
+    "pr_auc": 0.4296731526347001,
+    "recall": 0.5746215872117697,
+    "precision": 0.3965247950019523,
+    "f1": 0.4692427655518974,
+    "balanced_accuracy": 0.7165250744129016,
+    "brier_score": 0.0969608724117279
+  },
+  "xgboost_multiclass_cv_macro_f1": 0.423175665714866,
+  "strongest_non_xgboost_multiclass_cv_macro_f1": 0.4436134573423277,
+  "xgboost_beat_multiclass_macro_f1_baselines": false,
+  "top_feature_families": [
+    "general health burden",
+    "lifestyle",
+    "engineered interactions"
+  ],
+  "report": "reports\\brfss_final\\report.html",
+  "robustness": {
+    "bootstrap_repetitions": 1000,
+    "repeated_cv_folds": 15,
+    "profile_grouped_test_rows": 50735,
+    "profile_group_overlap": 0,
+    "profile_grouped_macro_f1": 0.4277507837264117,
+    "best_training_only_advanced_strategy": "Two-stage high-risk XGBoost",
+    "best_training_only_advanced_macro_f1": 0.46405746636897666,
+    "smotenc_macro_f1": 0.4337037747939893,
+    "report": "reports\\brfss_final\\report.html"
+  }
+}

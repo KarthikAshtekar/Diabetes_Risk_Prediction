@@ -1,0 +1,7 @@
+{
+  "final_sample_size": 5719,
+  "features_used": 65,
+  "failed_downloads": [],
+  "verdict": "NO-GO \u2014 fall back to BRFSS",
+  "report": "reports\\nhanes_feasibility\\report.html"
+}

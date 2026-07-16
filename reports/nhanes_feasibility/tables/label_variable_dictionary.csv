@@ -1,0 +1,6 @@
+label_source,nhanes_variable,available,class_1_rule,class_2_rule
+self-reported doctor-diagnosed/borderline diabetes,DIQ010,True,DIQ010 == 3 (borderline),DIQ010 == 1 (doctor diagnosed)
+self-reported prediabetes,DIQ160,True,DIQ160 == 1 (ever told prediabetes),not used for class 2
+HbA1c,LBXGH,True,5.7 <= LBXGH <= 6.4,LBXGH >= 6.5
+fasting plasma glucose,LBXGLU,True,100 <= LBXGLU <= 125 mg/dL,LBXGLU >= 126 mg/dL
+2-hour OGTT glucose,LBXGLT,True,140 <= LBXGLT <= 199 mg/dL,LBXGLT >= 200 mg/dL

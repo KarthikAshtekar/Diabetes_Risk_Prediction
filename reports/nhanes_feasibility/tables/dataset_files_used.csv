@@ -1,0 +1,16 @@
+component,filename,status,source_url
+demographics,DEMO_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.XPT
+diabetes_questionnaire,DIQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.XPT
+body_measures,BMX_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.XPT
+blood_pressure_exam,BPX_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.XPT
+blood_pressure_questionnaire,BPQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.XPT
+medical_conditions,MCQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/MCQ_I.XPT
+physical_activity,PAQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.XPT
+smoking,SMQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.XPT
+alcohol,ALQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.XPT
+diet,DBQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DBQ_I.XPT
+health_insurance,HIQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HIQ_I.XPT
+income,INQ_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/INQ_I.XPT
+glycohemoglobin,GHB_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.XPT
+fasting_glucose,GLU_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GLU_I.XPT
+ogtt,OGTT_I.XPT,available,https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/OGTT_I.XPT

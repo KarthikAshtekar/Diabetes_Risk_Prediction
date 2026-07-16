@@ -1,0 +1,8 @@
+{
+  "train_rows": 202945,
+  "test_rows": 50735,
+  "unique_profiles": 227908,
+  "train_unique_profiles": 182271,
+  "test_unique_profiles": 45637,
+  "profile_overlap_count": 0
+}

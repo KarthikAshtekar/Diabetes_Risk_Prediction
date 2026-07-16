@@ -1,0 +1,40 @@
+2026-06-20 07:28:08,221 | INFO | nhanes_feasibility | Downloading/validating official NHANES 2015-2016 files
+2026-06-20 07:28:09,415 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for DEMO_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:28:18,745 | INFO | nhanes_feasibility.download_nhanes | Downloaded DEMO_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DEMO_I.XPT
+2026-06-20 07:28:19,647 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for DIQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:28:21,000 | INFO | nhanes_feasibility.download_nhanes | Downloaded DIQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DIQ_I.XPT
+2026-06-20 07:28:22,022 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for BMX_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:28:22,971 | INFO | nhanes_feasibility.download_nhanes | Downloaded BMX_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BMX_I.XPT
+2026-06-20 07:28:23,718 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for BPX_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:28:41,141 | INFO | nhanes_feasibility.download_nhanes | Downloaded BPX_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPX_I.XPT
+2026-06-20 07:28:42,230 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for BPQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:28:46,716 | INFO | nhanes_feasibility.download_nhanes | Downloaded BPQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/BPQ_I.XPT
+2026-06-20 07:28:47,724 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for MCQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:30:48,165 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for MCQ_I.XPT: ReadTimeout: HTTPSConnectionPool(host='wwwn.cdc.gov', port=443): Read timed out. (read timeout=120)
+2026-06-20 07:30:53,831 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for PAQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:30:56,431 | INFO | nhanes_feasibility.download_nhanes | Downloaded PAQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/PAQ_I.XPT
+2026-06-20 07:30:57,280 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for SMQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:30:58,437 | INFO | nhanes_feasibility.download_nhanes | Downloaded SMQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/SMQ_I.XPT
+2026-06-20 07:30:59,416 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for ALQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:00,416 | INFO | nhanes_feasibility.download_nhanes | Downloaded ALQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/ALQ_I.XPT
+2026-06-20 07:31:01,192 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for DBQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:02,479 | INFO | nhanes_feasibility.download_nhanes | Downloaded DBQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/DBQ_I.XPT
+2026-06-20 07:31:31,967 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for HIQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:34,128 | INFO | nhanes_feasibility.download_nhanes | Downloaded HIQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/HIQ_I.XPT
+2026-06-20 07:31:35,934 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for INQ_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:38,443 | INFO | nhanes_feasibility.download_nhanes | Downloaded INQ_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/INQ_I.XPT
+2026-06-20 07:31:39,612 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for GHB_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:40,961 | INFO | nhanes_feasibility.download_nhanes | Downloaded GHB_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GHB_I.XPT
+2026-06-20 07:31:42,323 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for GLU_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:44,459 | INFO | nhanes_feasibility.download_nhanes | Downloaded GLU_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/GLU_I.XPT
+2026-06-20 07:31:45,967 | WARNING | nhanes_feasibility.download_nhanes | Download attempt failed for OGTT_I.XPT: Response was not an XPT file (content-type=text/html; charset=utf-8)
+2026-06-20 07:31:48,001 | INFO | nhanes_feasibility.download_nhanes | Downloaded OGTT_I.XPT from https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2015/DataFiles/OGTT_I.XPT
+2026-06-20 07:31:48,211 | WARNING | nhanes_feasibility.load_merge_nhanes | Missing file: D:\PGDBA\MyNotes\SEM-1\CDS\diabetes_012_health_indicators_BRFSS2015.csv\25BM6JP22\data\raw\nhanes\MCQ_I.XPT
+2026-06-20 07:31:48,516 | INFO | nhanes_feasibility | Merging 14 readable NHANES components on SEQN
+2026-06-20 07:31:56,138 | INFO | nhanes_feasibility | Fitting models with 4289 train rows and 60 Tier-1 features
+2026-06-20 07:33:53,741 | INFO | nhanes_feasibility | Downloading/validating official NHANES 2015-2016 files
+2026-06-20 07:33:54,235 | INFO | nhanes_feasibility | Merging 15 readable NHANES components on SEQN
+2026-06-20 07:34:02,680 | INFO | nhanes_feasibility | Fitting models with 4289 train rows and 65 Tier-1 features
+2026-06-20 07:34:51,371 | INFO | nhanes_feasibility | Downloading/validating official NHANES 2015-2016 files
+2026-06-20 07:34:51,829 | INFO | nhanes_feasibility | Merging 15 readable NHANES components on SEQN
+2026-06-20 07:35:00,168 | INFO | nhanes_feasibility | Fitting models with 4289 train rows and 65 Tier-1 features

@@ -1,0 +1,53 @@
+feature,importance,feature_family
+age_cardiometabolic_interaction,0.079396114,engineered interactions
+cardiometabolic_count,0.07796523,cardiometabolic history
+GenHlth,0.051004708,general health burden
+poor_general_health_flag,0.037448406,general health burden
+cholcheck_with_highchol_flag,0.026130045,healthcare access
+health_burden_score,0.025983375,general health burden
+bmi_highbp_interaction,0.023829347,engineered interactions
+HighBP,0.0231578,cardiometabolic history
+bmi_age_interaction,0.023138277,engineered interactions
+HvyAlcoholConsump,0.019709792,lifestyle
+CholCheck,0.018672705,healthcare access
+physical_inactivity_flag,0.01764364,lifestyle
+age_bmi_interaction,0.01734583,engineered interactions
+bmi_highchol_interaction,0.016925197,engineered interactions
+age_band,0.016577771,demographics
+NoDocbcCost,0.01646123,healthcare access
+HighChol,0.015750539,cardiometabolic history
+income_education_interaction,0.015744831,engineered interactions
+Age,0.015738,demographics
+bp_cholesterol_combo,0.015586183,cardiometabolic history
+Income,0.015405069,socioeconomic status
+older_adult_flag,0.015298197,demographics
+overweight_or_obese_flag,0.015210597,BMI/obesity
+Veggies,0.015180002,lifestyle
+PhysActivity,0.014864406,lifestyle
+preventive_screening_gap,0.014827514,healthcare access
+BMI,0.014810743,BMI/obesity
+total_unhealthy_days,0.014719699,general health burden
+Sex,0.014638455,demographics
+MentHlth,0.014589601,general health burden
+high_physical_distress_flag,0.014485124,general health burden
+bmi_category,0.014374512,BMI/obesity
+obese_flag,0.014363987,BMI/obesity
+smoking_inactivity_combo,0.014324422,engineered interactions
+healthcare_access_barrier,0.014297388,healthcare access
+Smoker,0.014215231,lifestyle
+Education,0.014197183,socioeconomic status
+DiffWalk,0.014197046,general health burden
+Stroke,0.014105257,cardiometabolic history
+socioeconomic_risk_count,0.013992066,socioeconomic status
+limited_functioning_flag,0.013736681,general health burden
+PhysHlth,0.013721726,general health burden
+diet_inactivity_combo,0.013333619,engineered interactions
+Fruits,0.013241024,lifestyle
+healthy_diet_flag,0.013182976,lifestyle
+cardio_event_history,0.013130618,cardiometabolic history
+HeartDiseaseorAttack,0.013116849,cardiometabolic history
+unhealthy_lifestyle_count,0.013045842,lifestyle
+high_mental_distress_flag,0.011954178,general health burden
+AnyHealthcare,0.011798974,healthcare access
+low_education_flag,0.0117604295,socioeconomic status
+low_income_flag,0.011671529,socioeconomic status

@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+xgboost
+imbalanced-learn
+joblib
+jupyter
+ipykernel
+pytest
+ruff

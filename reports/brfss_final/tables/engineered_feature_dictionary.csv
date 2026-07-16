@@ -1,0 +1,32 @@
+feature,formula,feature_family,domain_reasoning
+bmi_category,"BMI bands: <18.5, 18.5-24.9, 25-29.9, >=30",BMI/obesity,Captures nonlinear body-size risk.
+obese_flag,BMI >= 30,BMI/obesity,Separates obesity from continuous BMI.
+overweight_or_obese_flag,BMI >= 25,BMI/obesity,Captures elevated weight status.
+bmi_age_interaction,BMI * Age category,engineered interactions,Allows BMI risk to vary with age.
+bmi_highbp_interaction,BMI * HighBP,engineered interactions,Combines body size and hypertension.
+bmi_highchol_interaction,BMI * HighChol,engineered interactions,Combines body size and cholesterol history.
+cardiometabolic_count,"sum(HighBP, HighChol, HeartDiseaseorAttack, Stroke, DiffWalk, obese_flag)",cardiometabolic history,Summarises accumulated cardiometabolic burden.
+bp_cholesterol_combo,HighBP * HighChol,cardiometabolic history,Flags co-occurring hypertension and high cholesterol.
+cardio_event_history,Stroke OR HeartDiseaseorAttack,cardiometabolic history,Summarises prior cardiovascular events.
+unhealthy_lifestyle_count,Smoker + inactivity + no fruit + no vegetables + heavy alcohol,lifestyle,Counts modifiable lifestyle risks.
+healthy_diet_flag,Fruits AND Veggies,lifestyle,Simple healthy-diet behavior flag.
+physical_inactivity_flag,1 - PhysActivity,lifestyle,Makes inactivity direction explicit.
+smoking_inactivity_combo,Smoker * physical_inactivity_flag,engineered interactions,Captures co-occurring behavioral risks.
+diet_inactivity_combo,unhealthy diet * physical_inactivity_flag,engineered interactions,Captures combined diet/activity risk.
+healthcare_access_barrier,no healthcare OR NoDocbcCost,healthcare access,Summarises access barriers.
+preventive_screening_gap,no CholCheck OR no healthcare,healthcare access,Flags preventive-care gaps.
+cholcheck_with_highchol_flag,CholCheck * HighChol,healthcare access,Distinguishes known cholesterol history with screening.
+poor_general_health_flag,GenHlth >= 4,general health burden,Flags poor or very poor self-rated health.
+high_mental_distress_flag,MentHlth >= 14 days,general health burden,Common frequent-distress threshold.
+high_physical_distress_flag,PhysHlth >= 14 days,general health burden,Flags frequent physically unhealthy days.
+total_unhealthy_days,MentHlth + PhysHlth,general health burden,Combines reported unhealthy-day burden.
+limited_functioning_flag,DiffWalk OR high physical distress,general health burden,Captures functional limitation.
+health_burden_score,GenHlth + MentHlth/30 + PhysHlth/30 + DiffWalk,general health burden,"Compact, transparent health-burden score."
+low_income_flag,Income <= 3,socioeconomic status,Flags lower BRFSS income categories.
+low_education_flag,Education <= 3,socioeconomic status,Flags high-school-or-lower education categories.
+socioeconomic_risk_count,low_income_flag + low_education_flag,socioeconomic status,Counts socioeconomic risk indicators.
+income_education_interaction,Income * Education,engineered interactions,Represents joint socioeconomic position.
+age_band,"Age categories 1-4, 5-8, 9-11, 12-13",demographics,Groups ordinal BRFSS age bands.
+older_adult_flag,Age >= 10,demographics,Approximate age 60+ indicator.
+age_bmi_interaction,Age category * BMI,engineered interactions,Age-dependent BMI effect.
+age_cardiometabolic_interaction,Age * cardiometabolic_count,engineered interactions,Age-dependent accumulated burden.

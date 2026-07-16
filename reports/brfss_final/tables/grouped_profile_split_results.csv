@@ -1,0 +1,27 @@
+split_design,metric,value,test_rows,profile_overlap_count
+Official random holdout,accuracy,0.6492431409649952,50736,5104
+Official random holdout,macro_f1,0.4261622963342287,50736,5104
+Official random holdout,balanced_accuracy,0.5197527378003214,50736,5104
+Official random holdout,class_0_recall,0.6575653353922464,50736,5104
+Official random holdout,class_1_recall,0.2505399568034557,50736,5104
+Official random holdout,class_2_recall,0.6511529212052624,50736,5104
+Official random holdout,class_0_precision,0.9526472781506339,50736,5104
+Official random holdout,class_1_precision,0.03018082476909067,50736,5104
+Official random holdout,class_2_precision,0.33978002509780764,50736,5104
+Official random holdout,macro_roc_auc_ovr,0.7615236767185478,50736,5104
+Official random holdout,multiclass_log_loss,0.8136700987815857,50736,5104
+Official random holdout,multiclass_brier_score,0.4588190244694164,50736,5104
+Official random holdout,multiclass_ece,0.07996664284480288,50736,5104
+Profile-grouped holdout,accuracy,0.6477185374987681,50735,0
+Profile-grouped holdout,macro_f1,0.4277507837264117,50735,0
+Profile-grouped holdout,balanced_accuracy,0.529954879286482,50735,0
+Profile-grouped holdout,class_0_recall,0.6545390734674777,50735,0
+Profile-grouped holdout,class_1_recall,0.28077753779697623,50735,0
+Profile-grouped holdout,class_2_recall,0.6545480265949922,50735,0
+Profile-grouped holdout,class_0_precision,0.9527945233472974,50735,0
+Profile-grouped holdout,class_1_precision,0.03351379221448827,50735,0
+Profile-grouped holdout,class_2_precision,0.3398207990599295,50735,0
+Profile-grouped holdout,macro_roc_auc_ovr,0.7700163436079981,50735,0
+Profile-grouped holdout,multiclass_log_loss,0.8146556615829468,50735,0
+Profile-grouped holdout,multiclass_brier_score,0.45929480826682045,50735,0
+Profile-grouped holdout,multiclass_ece,0.07995534032227852,50735,0

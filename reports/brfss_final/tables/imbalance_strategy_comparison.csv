@@ -1,0 +1,4 @@
+model,cv_folds,macro_f1,macro_f1_std,balanced_accuracy,balanced_accuracy_std,class_0_recall,class_0_recall_std,class_1_recall,class_1_recall_std,class_2_recall,class_2_recall_std,macro_roc_auc_ovr,macro_roc_auc_ovr_std,strategy
+XGBoost,3,0.423175665714866,0.006625865141644151,0.504791468440681,0.006940054688727294,0.6750553972776195,0.013701101687688908,0.18429111871734824,0.007825086534577474,0.6550278893270753,0.014798342484001265,0.7508771048363695,0.0028732965439765747,Balanced sample weights inside each training fold
+XGBoost unweighted,3,0.3983018020706433,0.0009116213573582145,0.38767333155689193,0.0007088413509943991,0.9764165875276986,0.0005482908539312808,0.0,0.0,0.1866034071429773,0.002643926682729882,0.7760757859008364,0.0027949613375373205,No weighting/resampling
+SMOTE-NC,0,,,,,,,,,,,,,Not selected: synthetic coded survey profiles can distort ordinal/binary semantics and probability calibration.
