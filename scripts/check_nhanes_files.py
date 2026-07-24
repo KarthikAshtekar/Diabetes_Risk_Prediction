@@ -10,7 +10,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from nhanes_feasibility.config import NHANES_FILES, RAW_DATA_DIR  # noqa: E402
+from nhanes_feasibility.config import NHANES_FILES, RAW_DATA_DIR
 
 
 def main() -> int:
@@ -29,7 +29,7 @@ def main() -> int:
                 columns_count = len(frame.columns)
                 if "SEQN" not in frame.columns:
                     status = "missing SEQN"
-            except Exception as exc:
+            except (OSError, TypeError, ValueError) as exc:
                 status = "unreadable"
                 error = f"{type(exc).__name__}: {exc}"
         rows.append(

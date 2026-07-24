@@ -23,7 +23,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from brfss_diabetes.config import (  # noqa: E402
+from brfss_diabetes.config import (
     MODEL_DIR,
     RANDOM_STATE,
     REPORT_DIR,
@@ -32,16 +32,16 @@ from brfss_diabetes.config import (  # noqa: E402
     TEST_SIZE,
     ensure_directories,
 )
-from brfss_diabetes.data_loading import load_brfss_data, make_targets  # noqa: E402
-from brfss_diabetes.evaluation import threshold_analysis  # noqa: E402
-from brfss_diabetes.feature_engineering import BRFSSFeatureEngineer  # noqa: E402
-from brfss_diabetes.imbalance import balanced_sample_weights  # noqa: E402
-from brfss_diabetes.models import (  # noqa: E402
+from brfss_diabetes.data_loading import load_brfss_data, make_targets
+from brfss_diabetes.evaluation import threshold_analysis
+from brfss_diabetes.feature_engineering import BRFSSFeatureEngineer
+from brfss_diabetes.imbalance import balanced_sample_weights
+from brfss_diabetes.models import (
     comparison_models,
     tuned_xgboost_pipeline,
 )
-from brfss_diabetes.reporting import write_html_report  # noqa: E402
-from brfss_diabetes.robustness import (  # noqa: E402
+from brfss_diabetes.reporting import write_html_report
+from brfss_diabetes.robustness import (
     MulticlassLogitCalibrator,
     apply_probability_multipliers,
     binary_metric_row,
@@ -65,12 +65,12 @@ from brfss_diabetes.robustness import (  # noqa: E402
     tune_probability_multipliers,
     two_stage_predict_proba,
 )
-from brfss_diabetes.robustness_reporting import (  # noqa: E402
+from brfss_diabetes.robustness_reporting import (
     append_robustness_chart_map,
     generate_robustness_figures,
     update_report_with_robustness,
 )
-from brfss_diabetes.utils import (  # noqa: E402
+from brfss_diabetes.utils import (
     configure_logging,
     stratified_sample_indices,
     write_json,
@@ -247,18 +247,16 @@ def main() -> int:
             "Official random holdout",
             official_metrics,
             len(x_test),
-            int(
-                len(
-                    set(
-                        pd.util.hash_pandas_object(
-                            x_train, index=False
-                        ).to_numpy()
-                    )
-                    & set(
-                        pd.util.hash_pandas_object(
-                            x_test, index=False
-                        ).to_numpy()
-                    )
+            len(
+                set(
+                    pd.util.hash_pandas_object(
+                        x_train, index=False
+                    ).to_numpy()
+                )
+                & set(
+                    pd.util.hash_pandas_object(
+                        x_test, index=False
+                    ).to_numpy()
                 )
             ),
         ),

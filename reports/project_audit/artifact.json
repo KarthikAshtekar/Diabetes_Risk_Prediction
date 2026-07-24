@@ -1,0 +1,383 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Diabetes Project End-to-End Validation",
+    "description": "Technical audit of the refreshed BRFSS classification pipeline, NHANES feasibility study, active notebooks, generated reports, and repository checks.",
+    "generatedAt": "2026-07-24T00:00:00+05:30",
+    "cards": [
+      {
+        "id": "verification_card",
+        "description": "Repository checks completed after the full refresh.",
+        "dataset": "verification_status",
+        "sourceId": "project_validation",
+        "metrics": [
+          {
+            "label": "Tests passed",
+            "field": "tests_passed",
+            "format": "number"
+          },
+          {
+            "label": "Active notebooks executed",
+            "field": "active_notebooks_executed",
+            "format": "number"
+          },
+          {
+            "label": "Valid PNG figures",
+            "field": "valid_figures",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "brfss_multiclass_card",
+        "description": "Selected BRFSS multiclass XGBoost holdout performance.",
+        "dataset": "brfss_multiclass",
+        "sourceId": "brfss_run",
+        "metrics": [
+          {
+            "label": "Macro-F1",
+            "field": "macro_f1",
+            "format": "percent"
+          },
+          {
+            "label": "Balanced accuracy",
+            "field": "balanced_accuracy",
+            "format": "percent"
+          },
+          {
+            "label": "Macro PR-AUC",
+            "field": "macro_pr_auc",
+            "format": "percent"
+          }
+        ]
+      },
+      {
+        "id": "brfss_binary_card",
+        "description": "BRFSS binary high-risk screening performance at the selected 0.25 threshold.",
+        "dataset": "brfss_binary",
+        "sourceId": "brfss_run",
+        "metrics": [
+          {
+            "label": "PR-AUC",
+            "field": "pr_auc",
+            "format": "percent"
+          },
+          {
+            "label": "Recall",
+            "field": "recall",
+            "format": "percent"
+          },
+          {
+            "label": "Precision",
+            "field": "precision",
+            "format": "percent"
+          }
+        ]
+      },
+      {
+        "id": "nhanes_card",
+        "description": "Current NHANES XGBoost feasibility-pilot performance.",
+        "dataset": "nhanes_xgboost",
+        "sourceId": "nhanes_models",
+        "metrics": [
+          {
+            "label": "High-risk PR-AUC",
+            "field": "high_risk_pr_auc",
+            "format": "percent"
+          },
+          {
+            "label": "High-risk recall",
+            "field": "high_risk_recall",
+            "format": "percent"
+          },
+          {
+            "label": "Macro-F1",
+            "field": "macro_f1",
+            "format": "percent"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "brfss_holdout_chart",
+        "title": "BRFSS holdout performance metrics",
+        "subtitle": "The binary screening task is stronger than the three-class task; all values use a zero-based 0-100% scale.",
+        "type": "bar",
+        "dataset": "brfss_holdout_metrics",
+        "sourceId": "brfss_run",
+        "valueFormat": "percent",
+        "settings": {
+          "orientation": "horizontal",
+          "groupMode": "grouped"
+        },
+        "encodings": {
+          "x": {
+            "field": "metric",
+            "type": "nominal",
+            "label": "Metric"
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "label": "Score",
+            "format": "percent",
+            "scale": {
+              "domain": [
+                0,
+                1
+              ],
+              "zero": true
+            }
+          },
+          "tooltip": [
+            {
+              "field": "task",
+              "type": "nominal",
+              "label": "Task"
+            },
+            {
+              "field": "value",
+              "type": "quantitative",
+              "label": "Score",
+              "format": "percent"
+            }
+          ]
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "project_validation",
+        "label": "Project validation report",
+        "path": "reports/PROJECT_VALIDATION.md"
+      },
+      {
+        "id": "brfss_run",
+        "label": "BRFSS run summary",
+        "path": "reports/brfss_final/run_summary.json"
+      },
+      {
+        "id": "nhanes_models",
+        "label": "NHANES model comparison",
+        "path": "reports/nhanes_feasibility/tables/model_comparison.csv"
+      },
+      {
+        "id": "nhanes_acceptance",
+        "label": "NHANES acceptance criteria",
+        "path": "reports/nhanes_feasibility/tables/acceptance_criteria.csv"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Diabetes Project End-to-End Validation"
+      },
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Technical summary\n\nThe maintained BRFSS and NHANES workflows, both active notebooks, and the repository checks completed successfully in a clean project-local environment. The refreshed project is ready to share with documented limitations: BRFSS three-class prediction remains difficult, NHANES remains a feasibility no-go under the defined operational criteria, and the submitted PDF plus two Colab-era notebooks remain historical artifacts."
+      },
+      {
+        "id": "verification_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "verification_card"
+        ]
+      },
+      {
+        "id": "key_findings",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Key findings and implications\n\n- The selected BRFSS multiclass XGBoost model reaches 42.6% macro-F1; the stronger cross-validation baseline is ExtraTrees at 44.4%, so XGBoost should not be described as the universal multiclass leader.\n- The BRFSS binary screening model is more useful operationally: PR-AUC is 42.9% and recall is 59.0% at the selected 0.25 threshold.\n- The training-only two-stage robustness strategy improves multiclass macro-F1 to 46.2%, but it is exploratory evidence and is not the saved production model.\n- NHANES XGBoost reaches 80.9% high-risk PR-AUC, yet none of the three pre-declared deployment criteria passes; the documented decision remains a fallback to BRFSS."
+      },
+      {
+        "id": "brfss_chart",
+        "type": "chart",
+        "chartId": "brfss_holdout_chart"
+      },
+      {
+        "id": "brfss_metric_strip",
+        "type": "metric-strip",
+        "cardIds": [
+          "brfss_multiclass_card",
+          "brfss_binary_card"
+        ]
+      },
+      {
+        "id": "nhanes_decision",
+        "type": "markdown",
+        "sourceId": "nhanes_acceptance",
+        "body": "## NHANES feasibility decision\n\nThe model does not achieve the required top-k capture or testing-volume reduction. At 80% high-risk recall, it would test 60.9% of participants and reduce testing volume by 39.1%, just below the 40% requirement. The no-go verdict is therefore evidence-based rather than a claim that the classifier has no predictive signal."
+      },
+      {
+        "id": "nhanes_metric_strip",
+        "type": "metric-strip",
+        "cardIds": [
+          "nhanes_card"
+        ]
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Scope and data\n\nThe refresh covers the 253,680-row BRFSS 2015 dataset with 21 source predictors, the engineered 52-feature modeling matrix, the local NHANES pilot assembled from 15 readable XPT files, the two maintained notebooks, saved estimators, report generators, automated tests, lint rules, and dependency declaration. The historical final-report PDF was reviewed as an archive and was not overwritten."
+      },
+      {
+        "id": "methods",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Methods and reproducibility\n\nThe BRFSS workflow uses a stratified 80/20 holdout split, training-only cross-validation and resampling, explicit threshold selection for binary screening, calibration and classwise diagnostics, 1,000 bootstrap repetitions, repeated cross-validation, profile-grouped splitting, and robustness strategies that remain separate from the saved final model. The NHANES pilot merges records by SEQN, engineers clinical and questionnaire features, compares XGBoost, logistic regression, and a rule score, and evaluates pre-declared operational acceptance criteria. Both maintained notebooks were executed top to bottom using the repository-local kernel."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Limitations\n\n- BRFSS is cross-sectional self-report data, so results are predictive associations rather than causal effects or prospective clinical validation.\n- Prediabetes remains the weakest three-class outcome; aggregate scores can conceal that class-level limitation.\n- The selected multiclass model is not the cross-validation macro-F1 leader, and the stronger two-stage strategy is not the saved model.\n- NHANES is a single feasibility split with no external validation; its no-go verdict is specific to the stated operational thresholds.\n- The two historical Colab notebooks depend on `/content` paths and are preserved for provenance, not supported local execution."
+      },
+      {
+        "id": "next_steps",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Recommended next steps\n\n1. Treat the refreshed HTML reports and executed maintained notebooks as the canonical reader-facing outputs.\n2. If model development continues, compare the two-stage strategy with the saved XGBoost model under the same repeated and grouped validation design before replacement.\n3. For any clinical or policy use, add prospective or external validation, subgroup review, and threshold utility analysis.\n4. Keep historical submission artifacts clearly labelled instead of retrofitting them into the maintained pipeline."
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "sourceId": "project_validation",
+        "body": "## Further questions\n\n- Does the two-stage multiclass gain persist on an external cohort or later BRFSS wave?\n- Which subgroups experience the largest recall or calibration gaps?\n- Can a threshold policy improve screening utility without exceeding operational testing capacity?\n- Would a redesigned NHANES target or feature tier pass the pre-declared criteria without leakage?"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-24T00:00:00+05:30",
+    "status": "ready",
+    "datasets": {
+      "verification_status": [
+        {
+          "tests_passed": 13,
+          "active_notebooks_executed": 2,
+          "valid_figures": 21
+        }
+      ],
+      "brfss_multiclass": [
+        {
+          "macro_f1": 0.4256040516897594,
+          "balanced_accuracy": 0.518688756858296,
+          "macro_pr_auc": 0.46528992559730736
+        }
+      ],
+      "brfss_binary": [
+        {
+          "pr_auc": 0.4293533028515068,
+          "recall": 0.5898995614655538,
+          "precision": 0.386468952734013
+        }
+      ],
+      "nhanes_xgboost": [
+        {
+          "high_risk_pr_auc": 0.8093665315154217,
+          "high_risk_recall": 0.7814485387547649,
+          "macro_f1": 0.5420237771607731
+        }
+      ],
+      "brfss_holdout_metrics": [
+        {
+          "metric": "Multiclass macro-F1",
+          "task": "BRFSS multiclass",
+          "value": 0.4256040516897594
+        },
+        {
+          "metric": "Multiclass balanced accuracy",
+          "task": "BRFSS multiclass",
+          "value": 0.518688756858296
+        },
+        {
+          "metric": "Multiclass macro PR-AUC",
+          "task": "BRFSS multiclass",
+          "value": 0.46528992559730736
+        },
+        {
+          "metric": "Binary PR-AUC",
+          "task": "BRFSS binary screening",
+          "value": 0.4293533028515068
+        },
+        {
+          "metric": "Binary recall",
+          "task": "BRFSS binary screening",
+          "value": 0.5898995614655538
+        },
+        {
+          "metric": "Binary ROC-AUC",
+          "task": "BRFSS binary screening",
+          "value": 0.8285926177826042
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "project_validation",
+      "label": "Project validation report",
+      "path": "reports/PROJECT_VALIDATION.md",
+      "query": {
+        "engine": "DuckDB",
+        "language": "sql",
+        "description": "Materializes the reviewed repository check counts recorded in the project validation report.",
+        "sql": "SELECT 13 AS tests_passed, 2 AS active_notebooks_executed, 21 AS valid_figures",
+        "metric_definitions": [
+          "tests_passed: number of pytest cases passing in the final repository run.",
+          "active_notebooks_executed: maintained notebooks executed top to bottom with the project-local kernel.",
+          "valid_figures: regenerated PNG files with nonzero size and valid dimensions."
+        ]
+      }
+    },
+    {
+      "id": "brfss_run",
+      "label": "BRFSS run summary",
+      "path": "reports/brfss_final/run_summary.json",
+      "query": {
+        "engine": "DuckDB",
+        "language": "sql",
+        "description": "Reads the refreshed BRFSS summary and returns the holdout metrics used in the report.",
+        "sql": "WITH summary AS (\n  SELECT\n    multiclass_metrics.macro_f1 AS macro_f1,\n    multiclass_metrics.balanced_accuracy AS balanced_accuracy,\n    multiclass_metrics.macro_pr_auc_ovr AS macro_pr_auc,\n    binary_metrics.pr_auc AS pr_auc,\n    binary_metrics.recall AS recall,\n    binary_metrics.precision AS precision,\n    binary_metrics.roc_auc AS roc_auc\n  FROM read_json_auto('reports/brfss_final/run_summary.json')\n)\nSELECT metric, task, value, macro_f1, balanced_accuracy, macro_pr_auc, pr_auc, recall, precision, roc_auc\nFROM summary\nCROSS JOIN LATERAL (VALUES\n  ('Multiclass macro-F1', 'BRFSS multiclass', macro_f1),\n  ('Multiclass balanced accuracy', 'BRFSS multiclass', balanced_accuracy),\n  ('Multiclass macro PR-AUC', 'BRFSS multiclass', macro_pr_auc),\n  ('Binary PR-AUC', 'BRFSS binary screening', pr_auc),\n  ('Binary recall', 'BRFSS binary screening', recall),\n  ('Binary ROC-AUC', 'BRFSS binary screening', roc_auc)\n) AS metrics(metric, task, value)",
+        "metric_definitions": [
+          "Multiclass metrics are measured on the fixed stratified holdout set.",
+          "Binary metrics are measured at the training-selected threshold of 0.25.",
+          "All chart values are proportions on a zero-based 0-1 scale."
+        ]
+      }
+    },
+    {
+      "id": "nhanes_models",
+      "label": "NHANES model comparison",
+      "path": "reports/nhanes_feasibility/tables/model_comparison.csv",
+      "query": {
+        "engine": "DuckDB",
+        "language": "sql",
+        "description": "Reads the refreshed NHANES model comparison and selects the XGBoost feasibility-pilot row.",
+        "sql": "SELECT high_risk_pr_auc, high_risk_recall, macro_f1\nFROM read_csv_auto('reports/nhanes_feasibility/tables/model_comparison.csv')\nWHERE model = 'XGBoost'",
+        "metric_definitions": [
+          "High-risk combines diagnosed diabetes and laboratory-defined undiagnosed diabetes.",
+          "Metrics are from the fixed NHANES feasibility holdout split."
+        ]
+      }
+    },
+    {
+      "id": "nhanes_acceptance",
+      "label": "NHANES acceptance criteria",
+      "path": "reports/nhanes_feasibility/tables/acceptance_criteria.csv",
+      "query": {
+        "engine": "DuckDB",
+        "language": "sql",
+        "description": "Reads all pre-declared NHANES operational acceptance criteria and their observed outcomes.",
+        "sql": "SELECT criterion, definition, observed, passed\nFROM read_csv_auto('reports/nhanes_feasibility/tables/acceptance_criteria.csv')\nORDER BY criterion"
+      }
+    }
+  ]
+}

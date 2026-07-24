@@ -20,8 +20,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from brfss_diabetes.calibration import SigmoidProbabilityCalibrator  # noqa: E402
-from brfss_diabetes.config import (  # noqa: E402
+from brfss_diabetes.calibration import SigmoidProbabilityCalibrator
+from brfss_diabetes.config import (
     ABLATION_TRAIN_SAMPLE,
     ABLATION_VALIDATION_SAMPLE,
     MODEL_COMPARISON_SAMPLE,
@@ -35,49 +35,49 @@ from brfss_diabetes.config import (  # noqa: E402
     TUNING_SAMPLE,
     ensure_directories,
 )
-from brfss_diabetes.data_loading import load_brfss_data, make_targets  # noqa: E402
-from brfss_diabetes.evaluation import (  # noqa: E402
+from brfss_diabetes.data_loading import load_brfss_data, make_targets
+from brfss_diabetes.evaluation import (
     compare_models_cv,
     evaluate_binary,
     evaluate_multiclass,
     high_risk_threshold_analysis,
     threshold_analysis,
 )
-from brfss_diabetes.feature_engineering import (  # noqa: E402
+from brfss_diabetes.feature_engineering import (
     BRFSSFeatureEngineer,
     engineered_feature_dictionary,
 )
-from brfss_diabetes.imbalance import (  # noqa: E402
+from brfss_diabetes.imbalance import (
     balanced_sample_weights,
     binary_scale_pos_weight,
 )
-from brfss_diabetes.interpretation import (  # noqa: E402
+from brfss_diabetes.interpretation import (
     error_analysis,
     feature_family_ablation,
     subgroup_performance,
     transformed_permutation_importance,
     xgboost_feature_importance,
 )
-from brfss_diabetes.models import (  # noqa: E402
+from brfss_diabetes.models import (
     comparison_models,
     tuned_xgboost_pipeline,
 )
-from brfss_diabetes.reporting import (  # noqa: E402
+from brfss_diabetes.reporting import (
     generate_figures,
     write_html_report,
     write_reports,
 )
-from brfss_diabetes.tuning import (  # noqa: E402
+from brfss_diabetes.tuning import (
     tune_logistic,
     tune_random_forest,
     tune_xgboost,
 )
-from brfss_diabetes.utils import (  # noqa: E402
+from brfss_diabetes.utils import (
     configure_logging,
     stratified_sample_indices,
     write_json,
 )
-from brfss_diabetes.validation import validate_brfss_frame  # noqa: E402
+from brfss_diabetes.validation import validate_brfss_frame
 
 
 def _save_cv_results(frame: pd.DataFrame, filename: str) -> None:

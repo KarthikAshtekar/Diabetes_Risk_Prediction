@@ -25,12 +25,12 @@ XGBoost pipelines with training-only preprocessing and tuning. The multiclass mo
 ## Held-out metrics
 
 - Multiclass macro-F1: 0.426
-- Multiclass balanced accuracy: 0.520
-- Prediabetes recall: 0.251
-- Diabetes recall: 0.651
+- Multiclass balanced accuracy: 0.519
+- Prediabetes recall: 0.254
+- Diabetes recall: 0.645
 - Binary ROC-AUC: 0.829
-- Binary PR-AUC: 0.430
-- Binary recall at threshold 0.26: 0.575
+- Binary PR-AUC: 0.429
+- Binary recall at threshold 0.25: 0.590
 
 ## Limitations and ethical considerations
 

@@ -23,8 +23,8 @@ def load_available_components(
             continue
         try:
             frame = pd.read_sas(path, format="xport")
-        except Exception as exc:  # malformed public download should not stop pilot
-            LOGGER.exception("Could not read %s: %s", path, exc)
+        except Exception:  # malformed public download should not stop the pilot
+            LOGGER.exception("Could not read %s", path)
             continue
         frame.columns = [str(column).upper() for column in frame.columns]
         if "SEQN" not in frame.columns:

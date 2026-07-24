@@ -13,38 +13,38 @@
   "selected_multiclass_model": "XGBoost",
   "multiclass_cv_macro_f1_leader": {
     "model": "ExtraTrees",
-    "macro_f1": 0.4436134573423277
+    "macro_f1": 0.44361345734232777
   },
   "multiclass_metrics": {
-    "accuracy": 0.6492431409649952,
-    "macro_f1": 0.4261622963342287,
-    "weighted_f1": 0.7186602415865345,
-    "balanced_accuracy": 0.5197527378003214,
-    "macro_roc_auc_ovr": 0.7615236767185478,
-    "macro_pr_auc_ovr": 0.4650004925249288
+    "accuracy": 0.6479619993692841,
+    "macro_f1": 0.4256040516897594,
+    "weighted_f1": 0.718279965992946,
+    "balanced_accuracy": 0.518688756858296,
+    "macro_roc_auc_ovr": 0.7616251829265138,
+    "macro_pr_auc_ovr": 0.46528992559730736
   },
   "selected_binary_model": "XGBoost",
   "binary_cv_pr_auc_leader": {
     "model": "XGBoost",
-    "pr_auc": 0.4183811563682684
+    "pr_auc": 0.4160521991508584
   },
   "binary_metrics": {
-    "threshold": 0.26,
-    "roc_auc": 0.8286741499034429,
-    "pr_auc": 0.4296731526347001,
-    "recall": 0.5746215872117697,
-    "precision": 0.3965247950019523,
-    "f1": 0.4692427655518974,
-    "balanced_accuracy": 0.7165250744129016,
-    "brier_score": 0.0969608724117279
+    "threshold": 0.25,
+    "roc_auc": 0.8285926177826042,
+    "pr_auc": 0.4293533028515068,
+    "recall": 0.5898995614655538,
+    "precision": 0.386468952734013,
+    "f1": 0.46699143289097933,
+    "balanced_accuracy": 0.7191488326484111,
+    "brier_score": 0.09698639065027237
   },
-  "xgboost_multiclass_cv_macro_f1": 0.423175665714866,
-  "strongest_non_xgboost_multiclass_cv_macro_f1": 0.4436134573423277,
+  "xgboost_multiclass_cv_macro_f1": 0.4234937879137726,
+  "strongest_non_xgboost_multiclass_cv_macro_f1": 0.44361345734232777,
   "xgboost_beat_multiclass_macro_f1_baselines": false,
   "top_feature_families": [
     "general health burden",
-    "lifestyle",
-    "engineered interactions"
+    "engineered interactions",
+    "lifestyle"
   ],
   "report": "reports\\brfss_final\\report.html",
   "robustness": {
@@ -52,10 +52,10 @@
     "repeated_cv_folds": 15,
     "profile_grouped_test_rows": 50735,
     "profile_group_overlap": 0,
-    "profile_grouped_macro_f1": 0.4277507837264117,
+    "profile_grouped_macro_f1": 0.4265145225752005,
     "best_training_only_advanced_strategy": "Two-stage high-risk XGBoost",
-    "best_training_only_advanced_macro_f1": 0.46405746636897666,
-    "smotenc_macro_f1": 0.4337037747939893,
+    "best_training_only_advanced_macro_f1": 0.46189262421895205,
+    "smotenc_macro_f1": 0.4302552900987095,
     "report": "reports\\brfss_final\\report.html"
   }
 }

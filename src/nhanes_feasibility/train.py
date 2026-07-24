@@ -49,7 +49,7 @@ class RuleScoreModel:
         score += np.nan_to_num(smoker.to_numpy(), nan=0.0)
         return score
 
-    def fit(self, frame: pd.DataFrame, target: pd.Series) -> "RuleScoreModel":
+    def fit(self, frame: pd.DataFrame, target: pd.Series) -> RuleScoreModel:
         scores = self.score(frame).reshape(-1, 1)
         self.calibrator = LogisticRegression(
             max_iter=2000,

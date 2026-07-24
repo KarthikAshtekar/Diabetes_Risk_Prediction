@@ -17,7 +17,7 @@ class SigmoidProbabilityCalibrator:
 
     def fit(
         self, probability: np.ndarray, target: np.ndarray
-    ) -> "SigmoidProbabilityCalibrator":
+    ) -> SigmoidProbabilityCalibrator:
         self.model.fit(self._logit(probability), target)
         return self
 

@@ -20,7 +20,7 @@ def _binary(frame: pd.DataFrame, column: str) -> pd.Series:
 class BRFSSFeatureEngineer(BaseEstimator, TransformerMixin):
     """Deterministic domain-driven feature engineering without fitted state."""
 
-    def fit(self, x: pd.DataFrame, y: object = None) -> "BRFSSFeatureEngineer":
+    def fit(self, x: pd.DataFrame, y: object = None) -> BRFSSFeatureEngineer:
         return self
 
     def transform(self, x: pd.DataFrame) -> pd.DataFrame:

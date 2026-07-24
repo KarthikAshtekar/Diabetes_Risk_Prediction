@@ -2,22 +2,22 @@
 
 ## Three concise bullet options
 
-- Built BRFSS multiclass pipeline; macro-F1 0.426 and diabetes recall 0.651.
+- Built BRFSS multiclass pipeline; macro-F1 0.426 and diabetes recall 0.645.
 - Engineered 31 obesity, lifestyle, health, access and SES features.
-- Calibrated binary XGBoost reached ROC-AUC 0.829 and PR-AUC 0.430.
+- Calibrated binary XGBoost reached ROC-AUC 0.829 and PR-AUC 0.429.
 
 ## Four alternative bullet options
 
 - Tuned XGBoost and tree/linear baselines on 253k BRFSS 2015 records.
 - Built multiclass and binary BRFSS classifiers with leakage-safe CV and calibration.
-- Achieved 0.251 prediabetes recall in a 1.83%-prevalence multiclass task.
+- Achieved 0.254 prediabetes recall in a 1.83%-prevalence multiclass task.
 - Audited feature families and subgroup errors; general health burden ranked highest.
 
 <!-- ROBUSTNESS_ANALYSIS_START -->
 ## Robustness-focused bullet options
 
 - Validated BRFSS models with 15-fold repeated CV and 1,000 bootstrap resamples.
-- Built a two-stage diabetes-risk model with training-only macro-F1 0.464.
+- Built a two-stage diabetes-risk model with training-only macro-F1 0.462.
 - Tested grouped splits, calibration, SMOTE-NC and paired model significance.
 <!-- ROBUSTNESS_ANALYSIS_END -->
 

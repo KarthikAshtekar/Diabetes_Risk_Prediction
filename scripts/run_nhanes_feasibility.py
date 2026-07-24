@@ -15,7 +15,7 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from nhanes_feasibility.config import (  # noqa: E402
+from nhanes_feasibility.config import (
     PROCESSED_DATA_DIR,
     RANDOM_STATE,
     REPORT_DIR,
@@ -23,32 +23,32 @@ from nhanes_feasibility.config import (  # noqa: E402
     TEST_SIZE,
     ensure_directories,
 )
-from nhanes_feasibility.download_nhanes import download_nhanes_files  # noqa: E402
-from nhanes_feasibility.evaluate import CLASS_NAMES, evaluate_models  # noqa: E402
-from nhanes_feasibility.feature_sets import (  # noqa: E402
+from nhanes_feasibility.download_nhanes import download_nhanes_files
+from nhanes_feasibility.evaluate import CLASS_NAMES, evaluate_models
+from nhanes_feasibility.feature_sets import (
     engineer_features,
     select_tier1_features,
 )
-from nhanes_feasibility.labels import (  # noqa: E402
+from nhanes_feasibility.labels import (
     build_diabetes_risk_stage,
     has_label_evidence,
 )
-from nhanes_feasibility.load_merge_nhanes import (  # noqa: E402
+from nhanes_feasibility.load_merge_nhanes import (
     build_missingness_report,
     load_available_components,
     merge_components,
 )
-from nhanes_feasibility.reporting import (  # noqa: E402
+from nhanes_feasibility.reporting import (
     generate_figures,
     write_html_report,
     write_markdown_reports,
 )
-from nhanes_feasibility.threshold_analysis import (  # noqa: E402
+from nhanes_feasibility.threshold_analysis import (
     evaluate_acceptance_criteria,
     testing_burden_for_capture_targets,
     topk_testing_simulation,
 )
-from nhanes_feasibility.train import fit_models, model_sanity_table  # noqa: E402
+from nhanes_feasibility.train import fit_models, model_sanity_table
 
 
 def configure_logging() -> None:

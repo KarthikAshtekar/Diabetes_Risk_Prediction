@@ -10,11 +10,11 @@ HbA1c, fasting glucose and OGTT glucose would make the prioritisation task circu
 
 ## Was Tier-1 non-glycemic data enough?
 
-**Decision: NO-GO — fall back to BRFSS.** The strongest evidence is the held-out testing simulation and the comparison against a transparent rule score. XGBoost's high-risk PR-AUC was **0.812**.
+**Decision: NO-GO — fall back to BRFSS.** The strongest evidence is the held-out testing simulation and the comparison against a transparent rule score. XGBoost's high-risk PR-AUC was **0.809**.
 
 ## How much testing burden could be reduced?
 
-Testing the top 40% captured **58.7%** of high-risk participants and reduced immediate testing volume by **60.0%**. Reaching 80% high-risk capture required testing **60.9%** of participants, a **39.1%** reduction versus universal testing.
+Testing the top 40% captured **59.1%** of high-risk participants and reduced immediate testing volume by **60.0%**. Reaching 80% high-risk capture required testing **60.9%** of participants, a **39.1%** reduction versus universal testing.
 
 ## Does the project have logical and business value?
 

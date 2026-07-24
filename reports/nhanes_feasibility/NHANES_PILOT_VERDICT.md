@@ -140,7 +140,7 @@ No clean, generally administered gestational-diabetes or PCOS history variable w
 
 | model | macro_f1 | class_0_recall | class_1_recall | class_2_recall | high_risk_recall | high_risk_precision | high_risk_pr_auc | high_risk_roc_auc | high_risk_brier_score |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| XGBoost | 0.549 | 0.635 | 0.409 | 0.671 | 0.793 | 0.726 | 0.812 | 0.788 | 0.191 |
+| XGBoost | 0.542 | 0.633 | 0.399 | 0.661 | 0.781 | 0.723 | 0.809 | 0.788 | 0.191 |
 | Logistic Regression | 0.546 | 0.641 | 0.399 | 0.668 | 0.785 | 0.728 | 0.807 | 0.785 | 0.194 |
 | Simple Rule Score | 0.447 | 0.673 | 0.177 | 0.625 | 0.687 | 0.720 | 0.755 | 0.753 | 0.206 |
 
@@ -152,11 +152,11 @@ The business decision is based primarily on high-risk ranking quality and top-k 
 
 | model | testing_percentage | tested_n | testing_volume_reduction | high_risk_cases_captured | high_risk_capture_rate | diabetic_cases_captured | diabetic_capture_rate | diabetes_prone_cases_captured | diabetes_prone_capture_rate | number_needed_to_test | missed_high_risk_cases | precision_among_tested |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| XGBoost | 10.0% | 143 | 90.0% | 133 | 16.9% | 82 | 29.0% | 51 | 10.1% | 1.075 | 654 | 93.0% |
-| XGBoost | 20.0% | 286 | 80.0% | 250 | 31.8% | 137 | 48.4% | 113 | 22.4% | 1.144 | 537 | 87.4% |
-| XGBoost | 30.0% | 429 | 70.0% | 358 | 45.5% | 176 | 62.2% | 182 | 36.1% | 1.198 | 429 | 83.4% |
-| XGBoost | 40.0% | 572 | 60.0% | 462 | 58.7% | 216 | 76.3% | 246 | 48.8% | 1.238 | 325 | 80.8% |
-| XGBoost | 50.0% | 715 | 50.0% | 543 | 69.0% | 244 | 86.2% | 299 | 59.3% | 1.317 | 244 | 75.9% |
+| XGBoost | 10.0% | 143 | 90.0% | 131 | 16.6% | 81 | 28.6% | 50 | 9.9% | 1.092 | 656 | 91.6% |
+| XGBoost | 20.0% | 286 | 80.0% | 250 | 31.8% | 133 | 47.0% | 117 | 23.2% | 1.144 | 537 | 87.4% |
+| XGBoost | 30.0% | 429 | 70.0% | 358 | 45.5% | 177 | 62.5% | 181 | 35.9% | 1.198 | 429 | 83.4% |
+| XGBoost | 40.0% | 572 | 60.0% | 465 | 59.1% | 218 | 77.0% | 247 | 49.0% | 1.230 | 322 | 81.3% |
+| XGBoost | 50.0% | 715 | 50.0% | 540 | 68.6% | 241 | 85.2% | 299 | 59.3% | 1.324 | 247 | 75.5% |
 
 ![High-risk capture curve](figures/high_risk_capture_curve.png)
 
@@ -168,7 +168,7 @@ The business decision is based primarily on high-risk ranking quality and top-k 
 | --- | --- | --- | --- | --- | --- |
 | XGBoost | 70.0% | 731 | 51.1% | 48.9% | 551 |
 | XGBoost | 80.0% | 871 | 60.9% | 39.1% | 630 |
-| XGBoost | 90.0% | 1077 | 75.3% | 24.7% | 709 |
+| XGBoost | 90.0% | 1076 | 75.2% | 24.8% | 709 |
 
 ![Calibration curve](figures/calibration_curve.png)
 
@@ -178,9 +178,9 @@ Criterion C defines “materially beats” before inspecting results as at least
 
 | criterion | definition | observed | passed |
 | --- | --- | --- | --- |
-| A | Top 30% captures >=70% OR top 40% captures >=80% of high-risk cases | top30=45.5%; top40=58.7% | False |
+| A | Top 30% captures >=70% OR top 40% captures >=80% of high-risk cases | top30=45.5%; top40=59.1% | False |
 | B | At 80% high-risk recall, testing volume is reduced by >=40% | testing=60.9%; reduction=39.1% | False |
-| C | XGBoost exceeds rule score by >=0.03 PR-AUC and >=0.05 top-k capture | PR-AUC delta=+0.057; top30 delta=+2.2%; top40 delta=+3.2% | False |
+| C | XGBoost exceeds rule score by >=0.03 PR-AUC and >=0.05 top-k capture | PR-AUC delta=+0.054; top30 delta=+2.2%; top40 delta=+3.6% | False |
 
 ## Final recommendation
 

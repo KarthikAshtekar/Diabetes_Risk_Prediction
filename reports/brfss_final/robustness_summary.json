@@ -3,9 +3,9 @@
   "repeated_cv_folds": 15,
   "profile_grouped_test_rows": 50735,
   "profile_group_overlap": 0,
-  "profile_grouped_macro_f1": 0.4277507837264117,
+  "profile_grouped_macro_f1": 0.4265145225752005,
   "best_training_only_advanced_strategy": "Two-stage high-risk XGBoost",
-  "best_training_only_advanced_macro_f1": 0.46405746636897666,
-  "smotenc_macro_f1": 0.4337037747939893,
+  "best_training_only_advanced_macro_f1": 0.46189262421895205,
+  "smotenc_macro_f1": 0.4302552900987095,
   "report": "reports\\brfss_final\\report.html"
 }

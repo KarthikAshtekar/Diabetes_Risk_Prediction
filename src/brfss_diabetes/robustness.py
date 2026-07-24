@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
-from itertools import product
+from itertools import pairwise, product
 
 import numpy as np
 import pandas as pd
@@ -123,7 +123,7 @@ def multiclass_expected_calibration_error(
     correct = prediction == truth
     boundaries = np.linspace(0, 1, n_bins + 1)
     error = 0.0
-    for lower, upper in zip(boundaries[:-1], boundaries[1:], strict=True):
+    for lower, upper in pairwise(boundaries):
         if upper == 1:
             mask = (confidence >= lower) & (confidence <= upper)
         else:

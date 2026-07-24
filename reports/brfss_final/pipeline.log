@@ -24,3 +24,25 @@
 2026-06-20 10:18:33,363 | INFO | brfss_robustness | Computing official test-set bootstrap confidence intervals
 2026-06-20 10:20:54,543 | INFO | brfss_robustness | Fitting paired comparison models on the official training split
 2026-06-20 10:24:56,515 | INFO | brfss_robustness | Generating robustness figures and updating reports
+2026-07-24 13:15:34,099 | INFO | brfss_full_pipeline | Loading and validating BRFSS 2015 data
+2026-07-24 13:15:38,578 | INFO | brfss_full_pipeline | Running model comparison on a stratified training-only sample
+2026-07-24 13:17:00,940 | INFO | brfss_full_pipeline | Comparing multiclass XGBoost imbalance strategies
+2026-07-24 13:17:22,676 | INFO | brfss_full_pipeline | Tuning Logistic Regression, Random Forest and XGBoost
+2026-07-24 13:20:44,269 | INFO | brfss_full_pipeline | Selecting validation-only thresholds and binary calibration
+2026-07-24 13:21:34,669 | INFO | brfss_full_pipeline | Fitting final models on the complete training partition
+2026-07-24 13:22:31,533 | INFO | brfss_full_pipeline | Computing importance, ablation and error analysis
+2026-07-24 13:23:54,661 | INFO | brfss_full_pipeline | Saving models and generating reports
+2026-07-24 13:24:01,041 | INFO | brfss_full_pipeline | Running statistical and advanced-ML robustness analyses
+2026-07-24 13:24:02,074 | INFO | brfss_robustness | Loading official BRFSS split and saved model parameters
+2026-07-24 13:24:02,873 | INFO | brfss_robustness | Running 5x3 repeated cross-validation and feature-set ablation
+2026-07-24 13:27:36,765 | INFO | brfss_robustness | Evaluating a profile-grouped holdout
+2026-07-24 13:29:33,370 | INFO | brfss_robustness | Creating training-only strategy selection and evaluation splits
+2026-07-24 13:30:06,092 | INFO | brfss_robustness | Tuning multiclass probability multipliers
+2026-07-24 13:30:07,477 | INFO | brfss_robustness | Fitting multiclass probability calibration
+2026-07-24 13:30:07,748 | INFO | brfss_robustness | Searching custom class-weight multipliers
+2026-07-24 13:33:54,645 | INFO | brfss_robustness | Fitting ordinal and two-stage multiclass alternatives
+2026-07-24 13:34:28,550 | INFO | brfss_robustness | Selecting an out-of-fold three-model ensemble
+2026-07-24 13:36:24,597 | INFO | brfss_robustness | Running fold-safe moderate SMOTE-NC sensitivity analysis
+2026-07-24 13:37:02,814 | INFO | brfss_robustness | Computing official test-set bootstrap confidence intervals
+2026-07-24 13:38:52,574 | INFO | brfss_robustness | Fitting paired comparison models on the official training split
+2026-07-24 13:42:07,349 | INFO | brfss_robustness | Generating robustness figures and updating reports

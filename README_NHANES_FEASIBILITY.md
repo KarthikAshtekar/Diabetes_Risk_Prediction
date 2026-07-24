@@ -6,6 +6,12 @@ The model does not diagnose diabetes. It ranks adults by estimated likelihood of
 
 Glycemic biomarkers and self-reported diabetes status are used only to construct the ground-truth label. They are excluded from all model predictors.
 
+Last verified by full local execution: **2026-07-24**, using the pinned versions in `requirements.txt`.
+
+## Current verified decision
+
+**NO-GO — retain BRFSS as the official project.** The refreshed XGBoost high-risk PR-AUC is **0.809**. Testing the top 40% captures **59.1%** of high-risk participants; reaching 80% capture requires testing **60.9%** of participants. None of the predefined acceptance criteria passes.
+
 ## Data source
 
 The pipeline uses official NHANES 2015–2016 public SAS XPORT (`.XPT`) files from CDC/NCHS. The project brief's legacy URL is attempted first. Because that endpoint currently returns a CDC Page Not Found HTML response, the downloader validates the XPT header and falls back to the current official path:
@@ -71,5 +77,6 @@ The final decision is written to:
 - `reports/nhanes_feasibility/NHANES_PILOT_VERDICT.md`
 - `reports/nhanes_feasibility/FEASIBILITY_SUMMARY.md`
 - `reports/nhanes_feasibility/report.html`
+- `notebooks/01_nhanes_feasibility_eda.ipynb`
 
 If none of the predefined criteria passes, BRFSS remains the official project.

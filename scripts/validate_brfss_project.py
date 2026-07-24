@@ -19,8 +19,8 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from brfss_diabetes.config import MODEL_DIR, REPORT_DIR, TABLE_DIR  # noqa: E402
-from brfss_diabetes.data_loading import load_brfss_data  # noqa: E402
+from brfss_diabetes.config import MODEL_DIR, REPORT_DIR, TABLE_DIR
+from brfss_diabetes.data_loading import load_brfss_data
 
 
 def main() -> int:

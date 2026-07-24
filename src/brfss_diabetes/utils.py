@@ -33,7 +33,7 @@ def stratified_sample_indices(
         return target.index.to_numpy()
     generator = np.random.default_rng(random_state)
     sampled: list[np.ndarray] = []
-    for _, indices in target.groupby(target).groups.items():
+    for indices in target.groupby(target).groups.values():
         group_indices = np.asarray(list(indices))
         group_n = max(1, round(n * len(group_indices) / len(target)))
         sampled.append(

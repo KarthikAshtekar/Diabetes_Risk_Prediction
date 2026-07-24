@@ -1,4 +1,4 @@
 criterion,definition,observed,passed
-A,Top 30% captures >=70% OR top 40% captures >=80% of high-risk cases,top30=45.5%; top40=58.7%,False
+A,Top 30% captures >=70% OR top 40% captures >=80% of high-risk cases,top30=45.5%; top40=59.1%,False
 B,"At 80% high-risk recall, testing volume is reduced by >=40%",testing=60.9%; reduction=39.1%,False
-C,XGBoost exceeds rule score by >=0.03 PR-AUC and >=0.05 top-k capture,PR-AUC delta=+0.057; top30 delta=+2.2%; top40 delta=+3.2%,False
+C,XGBoost exceeds rule score by >=0.03 PR-AUC and >=0.05 top-k capture,PR-AUC delta=+0.054; top30 delta=+2.2%; top40 delta=+3.6%,False

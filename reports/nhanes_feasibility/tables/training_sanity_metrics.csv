@@ -1,4 +1,4 @@
 model,train_balanced_accuracy
-Logistic Regression,0.6066013949863137
-XGBoost,0.6982107291619583
+Logistic Regression,0.6064285938803866
+XGBoost,0.6930989521160255
 Simple Rule Score,0.5144885993002917

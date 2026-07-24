@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import re
 import textwrap
+from datetime import datetime, timezone
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -813,6 +814,8 @@ The NHANES pilot asked a narrower operational question: whether non-glycemic ind
 
 The official project builds leakage-safe multiclass and binary diabetes risk models on the existing BRFSS 2015 CSV. It is a screening and machine-learning project, not a medical diagnostic system.
 
+Last verified by full local execution: **{datetime.now(tz=timezone.utc).date().isoformat()}**. Install the pinned versions in `requirements.txt` before comparing regenerated metrics with the committed artifacts.
+
 ## Dataset and formulation
 
 - {dataset_shape[0]:,} BRFSS rows and {original_feature_count} original predictors
@@ -840,12 +843,13 @@ source .venv/Scripts/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python scripts/run_brfss_full_pipeline.py
-# Optional: rerun only the robustness stage after base outputs exist
-python scripts/run_brfss_robustness_analysis.py
+python scripts/run_nhanes_feasibility.py
 python scripts/validate_brfss_project.py
 pytest
 ruff check .
 ```
+
+The full BRFSS command includes the robustness stage. Run `python scripts/run_brfss_robustness_analysis.py` separately only to refresh robustness outputs after valid base outputs already exist.
 
 ## Run on PowerShell
 
@@ -855,21 +859,33 @@ python -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python scripts/run_brfss_full_pipeline.py
-# Optional: rerun only the robustness stage after base outputs exist
-python scripts/run_brfss_robustness_analysis.py
+python scripts/run_nhanes_feasibility.py
 python scripts/validate_brfss_project.py
 pytest
 ruff check .
 ```
 
+The two maintained notebooks were executed top-to-bottom with the repo-local environment. To reproduce that validation, install a local kernelspec and execute both:
+
+```powershell
+python -m ipykernel install --prefix .venv --name diabetes-project-venv --display-name "Python (diabetes project .venv)"
+$env:JUPYTER_PATH = (Resolve-Path ".venv\\share\\jupyter").Path
+jupyter-nbconvert --execute --to notebook --inplace --ExecutePreprocessor.kernel_name=diabetes-project-venv notebooks\\01_brfss_final_pipeline_walkthrough.ipynb
+jupyter-nbconvert --execute --to notebook --inplace --ExecutePreprocessor.kernel_name=diabetes-project-venv notebooks\\01_nhanes_feasibility_eda.ipynb
+```
+
 ## Key outputs
 
+- `reports/project_audit/diabetes_project_validation.html`
+- `reports/PROJECT_VALIDATION.md`
 - `reports/brfss_final/FINAL_REPORT.md`
 - `reports/brfss_final/report.html`
 - `reports/brfss_final/MODEL_CARD.md`
 - `reports/brfss_final/CV_SUMMARY.md`
 - `reports/brfss_final/INTERVIEW_DEFENSE_NOTES.md`
 - `notebooks/01_brfss_final_pipeline_walkthrough.ipynb`
+- `reports/nhanes_feasibility/NHANES_PILOT_VERDICT.md`
+- `notebooks/01_nhanes_feasibility_eda.ipynb`
 - `models/brfss_final/`
 
 ## Repository structure
@@ -877,8 +893,14 @@ ruff check .
 - `src/brfss_diabetes/`: reusable production logic
 - `scripts/`: full, binary and validation entry points
 - `tests/`: loading, leakage, feature and metric checks
+- `notebooks/`: maintained walkthroughs plus an archived Colab baseline
 - `reports/brfss_final/`: tables, figures and project documentation
 - `reports/nhanes_feasibility/`: rejected research extension
+- `reports/project_audit/`: validated portable audit report and source manifest
+
+## Historical artifacts
+
+`25BM6JP22_CDS_CODE.ipynb` and `notebooks/legacy_brfss_baseline.ipynb` are identical Colab-era snapshots with `/content` paths and Colab-only steps; they are preserved for history and are not the maintained local execution path. `25BM6JP22_CDS_Final_Report.pdf` is the corresponding historical submitted report. Current verified results are the generated artifacts under `reports/`.
 
 ## Limitations
 

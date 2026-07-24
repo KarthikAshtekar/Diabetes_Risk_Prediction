@@ -73,7 +73,7 @@ def testing_burden_for_capture_targets(
     rows: list[dict[str, object]] = []
 
     for target in targets:
-        required_cases = int(math.ceil(target * total_high_risk))
+        required_cases = math.ceil(target * total_high_risk)
         if required_cases == 0:
             tested_n = 0
         else:

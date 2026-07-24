@@ -10,7 +10,7 @@ The NHANES pilot asked a narrower operational question: whether non-glycemic ind
 - **Why XGBoost:** it models nonlinearities and interactions in mixed coded health indicators while supporting weighted training.
 - **Why imbalance matters:** majority-class accuracy can hide near-zero prediabetes recall.
 - **Why accuracy is insufficient:** macro-F1, balanced accuracy, class recall and PR-AUC weight minority performance more appropriately.
-- **Most important feature families:** general health burden, lifestyle, engineered interactions.
+- **Most important feature families:** general health burden, engineered interactions, lifestyle.
 - **Domain features:** cardiometabolic count, health-burden score, BMI categories and access/lifestyle combinations encode transparent hypotheses.
 - **Limitations:** self-reporting, profile duplicates, one cycle, absent clinical biomarkers and no external validation.
 - **Future work:** temporal validation, grouped profile split, cost-sensitive learning and prevalence-shift recalibration.
@@ -20,7 +20,7 @@ The NHANES pilot asked a narrower operational question: whether non-glycemic ind
 
 - **Uncertainty:** macro-F1 95% bootstrap interval was [0.422, 0.430].
 - **Repeated CV:** model rankings were checked over 15 folds rather than one split.
-- **Duplicate profiles:** a grouped-profile holdout produced macro-F1 0.428 with zero profile overlap.
+- **Duplicate profiles:** a grouped-profile holdout produced macro-F1 0.427 with zero profile overlap.
 - **Feature engineering:** repeated-CV ablation compared the original 21 predictors against all 52 predictors.
 - **Alternative designs:** ordinal, two-stage, ensemble, calibrated, threshold-adjusted and custom-weight models were evaluated on training-only partitions.
 - **SMOTE-NC:** tested inside CV folds; its result is reported rather than assumed beneficial.
