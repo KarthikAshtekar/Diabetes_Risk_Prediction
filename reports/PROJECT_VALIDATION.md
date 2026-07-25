@@ -14,7 +14,7 @@ The two identical Colab-era notebooks are preserved as historical evidence. They
 - **Extension source:** 15 official NHANES 2015–2016 XPT components under `data/raw/nhanes/`; all were readable and contained `SEQN`.
 - **Environment:** Python 3.13.7 with exact direct dependency versions pinned in `requirements.txt`.
 - **Maintained notebooks:** `notebooks/01_brfss_final_pipeline_walkthrough.ipynb` and `notebooks/01_nhanes_feasibility_eda.ipynb`.
-- **Historical notebooks:** `25BM6JP22_CDS_CODE.ipynb` and `notebooks/legacy_brfss_baseline.ipynb`; their SHA-256 hashes are identical.
+- **Historical notebooks:** `CODE.ipynb` and `notebooks/legacy_brfss_baseline.ipynb`; their SHA-256 hashes are identical.
 
 ## Reproduction and methodology review
 

@@ -900,7 +900,7 @@ jupyter-nbconvert --execute --to notebook --inplace --ExecutePreprocessor.kernel
 
 ## Historical artifacts
 
-`25BM6JP22_CDS_CODE.ipynb` and `notebooks/legacy_brfss_baseline.ipynb` are identical Colab-era snapshots with `/content` paths and Colab-only steps; they are preserved for history and are not the maintained local execution path. `25BM6JP22_CDS_Final_Report.pdf` is the corresponding historical submitted report. Current verified results are the generated artifacts under `reports/`.
+`CODE.ipynb` and `notebooks/legacy_brfss_baseline.ipynb` are identical Colab-era snapshots with `/content` paths and Colab-only steps; they are preserved for history and are not the maintained local execution path. `25BM6JP22_CDS_Final_Report.pdf` is the corresponding historical submitted report. Current verified results are the generated artifacts under `reports/`.
 
 ## Limitations
 
